@@ -1,0 +1,84 @@
+<!DOCTYPE ht ml>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-bar">
+  <div style="display: flex; align-items: center;">
+    <img src="LogoWhite.png" alt="Logo" class="logo" />
+    <span class="top-bar-text">CALLISTER</span>
+  </div>
+  <div class="top-bar-buttons">
+  <button onclick="scrollToSection('games')">GAMES</button>
+  <button onclick="scrollToSection('team')">ABOUT US</button>
+  <button onclick="scrollToSection('contact')">CONTACT</button>
+</div>
+</div>
+<div class="video-zone">
+  <video autoplay muted loop playsinline class="video-bg">
+    <source src="gameplay.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-content">
+    <h2 class="video-zone-text">EXPAND THE LIMITS</h2>
+    <p class="video-zone-subtext">We are a team of passionate gamers that create immersive worlds for you to explore.</p>
+    <button class="video-zone-btn" onclick="location.href='mailto:callisterstudio@gmail.com'">Contact</button>
+  </div>
+</div>
+<div>
+  <h1 id="games" class="section-title">OUR GAMES</h1>
+  <div class="game-list">
+    <div class="game-item">
+    <div>
+      <div class="game-title">PAGAN BLOOD</div>
+      <div class="game-description">Game description goes here.</div>
+    </div>
+    <img src="PAGAN.jpg" alt="PAGAN BLOOD" class="game-image" />
+    </div>
+    <div class="game-item">
+    <img src="PAGAN.jpg" alt="SURVIVAL SANDBOX" class="game-image" />
+    <div>
+      <div class="game-title">SURVIVAL SANDBOX</div>
+      <div class="game-description">Game description goes here.</div>
+    </div>
+    </div>
+    <div class="game-item">
+    <div>
+      <div class="game-title">WIZARD UNIVERSE</div>
+      <div class="game-description">Game description goes here.</div>
+    </div>
+    <img src="PAGAN.jpg" alt="WIZARD UNIVERSE" class="game-image" />
+    </div>
+  </div>
+</div>
+<div class="team-zone">
+  <h1 class="section-title" style="color: #fff" id="team">MEET THE TEAM</h1>
+  <div class="team-members">
+  <div class="team-member">
+    <img src="Member.png" alt="Team Member 1" class="team-image" />
+    <div class="team-info">
+      <h2 class="team-name">Danil Dobychyn</h2>
+      <p class="team-role">Developer</p>
+    </div>
+  </div>
+  <div class="team-member">
+    <img src="Member.png" alt="Team Member 2" class="team-image" />
+    <div class="team-info">
+      <h2 class="team-name">Mykyta Horshkov</h2>
+      <p class="team-role">Vibe Coder</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="footer">
+  <h1 class="section-title" id="contact">CONTACT US</h1>
+  <p class="footer-text"><a href="mailto:callisterstudio@gmail.com">callisterstudio@gmail.com</a></p>
+  <p>&copy; 2025 Callister. All rights reserved.</p>
+</div>
+  <script src="main.js"></script>
+</body>
+</html>
