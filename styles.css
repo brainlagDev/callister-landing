@@ -182,6 +182,7 @@ header {
 
 .game-list {
   display: flex;
+  color: #fff;
   align-items: center;
   flex-direction: column; 
   gap: 2rem;
@@ -355,7 +356,58 @@ header {
   text-align: right;
 }
 
-/* Optional: style the rest of the footer content */
 .footer-text {
   margin-left: 2rem;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 16rem;
+  right: 2rem;
+  z-index: 200;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 0;
+  transition: opacity 0.4s, background 0.4s, color 0.4s;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-to-top img {
+  width: 60%;
+  height: 60%;
+  z-index: 201;
+  object-fit: contain;
+  display: block;
+  transition: filter 0.4s;
+}
+
+.scroll-to-top.light {
+  background: #fff;
+  color: #000;
+}
+.scroll-to-top.light img {
+  filter: invert(1);
+}
+.scroll-to-top.dark {
+  background: #000;
+  color: #fff;
+}
+.scroll-to-top.dark img {
+  filter: none;
 }
