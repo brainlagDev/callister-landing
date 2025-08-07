@@ -207,11 +207,10 @@ header {
 }
 
 .game-info {
-  font-family: 'Jost', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
-  justify-content: flex-start; 
+  justify-content: space-between; /* Pushes image link to the bottom */
+  align-items: flex-start;
   height: 100%;
 }
 
@@ -301,6 +300,17 @@ header {
   height: 36px;
   object-fit: contain;
   transition: opacity 0.2s;
+}
+
+.itch-icon {
+  height: 36px;
+  object-fit: contain;
+  transition: opacity 0.2s;
+  margin-top: 1rem;
+}
+
+.itch-icon:hover {
+  opacity: 0.7;
 }
 
 .social-icon:hover {
