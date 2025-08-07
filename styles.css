@@ -1,5 +1,5 @@
 body {
-  font-family: jost;
+  font-family: 'Jost', sans-serif;
   margin: 0;
   background-color: #f4f4f4;
   text-align: center;
@@ -247,7 +247,7 @@ header {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .team-name {
