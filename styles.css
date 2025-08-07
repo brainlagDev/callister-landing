@@ -26,6 +26,13 @@ header {
   align-items: center;
   padding: 0 2rem;
   justify-content: space-between;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.top-bar.hide {
+  transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .logo {
@@ -115,6 +122,19 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start; 
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .video-zone-text {
@@ -246,7 +266,18 @@ header {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  gap: 3rem;
+  gap: 4rem;
+}
+
+.team-member:hover
+{
+  transition: transform 0.2s;
+  transform: scale(1.05);
+}
+
+.team-member:not(:hover) {
+  transition: transform 0.2s;
+  transform: scale(1);
 }
 
 .team-name {
