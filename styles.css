@@ -105,7 +105,7 @@ header {
   background: linear-gradient(
     to right,
     rgb(0, 0, 0) 0%,
-    rgba(124, 124, 124, 0.781) 60%,
+    rgba(0, 0, 0, 0.164) 60%,
     rgba(141, 1, 1, 0) 100%
   );
 }
@@ -201,6 +201,19 @@ header {
   text-align: left;
   justify-content: space-between;
   gap: 2rem;
+}
+
+.game-slideshow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.game-slideshow img {
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.5s;
 }
 
 .game-title {
@@ -409,4 +422,91 @@ header {
 }
 .scroll-to-top.dark img {
   filter: none;
+}
+
+.game-slideshow {
+  position: relative;
+  width: 50%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game-slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.5s;
+}
+.slideshow-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.slideshow-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.slideshow-dots button.active {
+  background: #000;
+}
+
+
+/* Keep slideshow images aspect ratio */
+.game-slideshow img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Optional: background for letterboxing */
+}
+
+/* Ensure game description directly below title */
+.game-info .game-description {
+  margin-top: 0.5rem;
+}
+
+/* Footer full width */
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .game-item {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+  .game-slideshow {
+    width: 100%;
+    height: auto;
+  }
+  .game-slideshow img {
+    max-height: 300px;
+  }
+  .game-info {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .slideshow-dots button {
+    width: 16px;
+    height: 16px;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-contact {
+    align-items: center;
+    text-align: center;
+  }
 }
